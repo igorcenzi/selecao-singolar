@@ -49,7 +49,7 @@ THIRDY_PARTY_APPS = [
     "drf_spectacular",
 ]
 
-MY_APPS = ["users", "posts"]
+MY_APPS = ["users", "posts", "comments"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRDY_PARTY_APPS + MY_APPS
 
