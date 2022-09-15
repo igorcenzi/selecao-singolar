@@ -36,4 +36,5 @@ urlpatterns = [
     path("verify/", TokenVerifyView.as_view()),
     path("docs/redoc/", SpectacularRedocView.as_view(url_name="schema"), name="redoc"),
     path("users/", include("users.urls")),
+    path("posts/", include("posts.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
