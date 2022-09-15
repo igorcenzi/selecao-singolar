@@ -27,6 +27,9 @@ Com o Git instalado e configurado, você pode clonar este repositório utilizand
 git clone git@github.com:igorcenzi/selecao-singolar.git
 ```
 
+Depois de clonar, você precisa criar um arquivo de configuração. Na raiz do projeto crie um arquivo chamado .env
+Dentro do arquivo .env.example, copie as variáveis e cole no arquivo criado e preencha com suas informações. Ele está sendo mapeado tanto no aplicativo django quanto no docker, então você não irá precisar alterar nada mais.
+
 Agora, entre na pasta do projeto e execute este comando no terminal:
 
 ```bash
