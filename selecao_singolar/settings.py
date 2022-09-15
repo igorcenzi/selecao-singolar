@@ -49,7 +49,7 @@ THIRDY_PARTY_APPS = [
     "drf_spectacular",
 ]
 
-MY_APPS = ["users", "posts", "comments"]
+MY_APPS = ["users", "posts", "comments", "likes"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRDY_PARTY_APPS + MY_APPS
 
@@ -100,8 +100,8 @@ DATABASES = {
         "NAME": os.getenv("POSTGRES_DB"),
         "USER": os.getenv("POSTGRES_USER"),
         "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
-        "HOST": "localhost",
-        "PORT": 45432,
+        "HOST": "db",
+        "PORT": 5432,
     }
 }
 

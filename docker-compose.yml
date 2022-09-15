@@ -7,23 +7,25 @@ services:
     ports:
       - 45432:5432
 
-  # migration:
-  #   build: .
-  #   command: python manage.py migrate --noinput
-  #   volumes:
-  #     - .:/code
+  migration:
+    build: .
+    command: python manage.py migrate --noinput
+    volumes:
+      - .:/code
+    depends_on:
+      - db
 
-  # api:
-  #   build: .
-  #   env_file: .env
-  #   command: "python manage.py runserver 0.0.0.0:8000"
-  #   volumes:
-  #     - .:/app
-  #   stdin_open: true
-  #   tty: true
-  #   ports:
-  #     - 8000:8000
+  api:
+    build: .
+    env_file: .env
+    command: "python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    ports:
+      - 8000:8000
 
-  #   depends_on:
-  #     - db
-  #     - migration
+    depends_on:
+      - db
+      - migration
